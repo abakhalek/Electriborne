@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { useForm, useFieldArray } from 'react-hook-form';
 import { Plus, Trash2 } from 'lucide-react';
 import toast from 'react-hot-toast';
-import apiService from '../../../services/apiService';
-import Button from '../../../components/Button';
-import Layout from '../../../components/Layout'; // Assuming it needs a layout
+import apiService from '../../services/apiService';
+import Button from '../../components/Button';
+import Layout from '../../components/Layout'; // Assuming it needs a layout
 
 interface ServiceImage {
   url: string;

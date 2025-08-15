@@ -3,9 +3,9 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useForm, useFieldArray } from 'react-hook-form';
 import { Plus, Trash2 } from 'lucide-react';
 import toast from 'react-hot-toast';
-import apiService from '../../../services/apiService';
-import Button from '../../../components/Button';
-import Layout from '../../../components/Layout'; // Assuming it needs a layout
+import apiService from '../../services/apiService';
+import Button from '../../components/Button';
+import Layout from '../../components/Layout'; // Assuming it needs a layout
 
 interface ServiceImage {
   url: string;
@@ -186,7 +186,7 @@ const EditServiceType: React.FC = () => {
                 <input
                   type="text"
                   {...register(`existingImages.${index}.description`)}
-                  placeholder="Description de l'image"+
+                  placeholder="Description de l'image"
                   className="w-full border border-gray-300 rounded-lg px-3 py-2"
                 />
                 <Button type="button" variant="ghost" onClick={() => removeExistingImage(index)}>
