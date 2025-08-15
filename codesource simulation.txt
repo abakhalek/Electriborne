@@ -1,0 +1,1397 @@
+
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                        
+<title>Simulateur temps de recharge d'une voiture électrique</title>
+<meta name="description" content="Simulez le temps de recharge de votre voiture électrique et trouvez la solution - borne ou prise - la plus adaptée à vos usages !">
+<meta property="og:title" content="Simulateur temps de recharge d'une voiture électrique">
+<meta property="og:url" content="https://izi-by-edf.fr/simulateur/temps-de-recharge">
+<meta property="og:description" content="Simulez le temps de recharge de votre voiture électrique et trouvez la solution - borne ou prise - la plus adaptée à vos usages !">
+<link rel="canonical" href="https://izi-by-edf.fr/simulateur/temps-de-recharge">
+    <!-- TrustBox script -->
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+    <!-- End TrustBox script -->
+    <link rel="stylesheet" href="/theme/website/noUiSlider/noUiSlider.css" />
+        <meta property="og:site_name" content="IZI by EDF">
+        <meta property="og:type" content="website">
+                    <meta property="og:image" content="/theme/website/assets/images/izi-by-edf-facebook.png">
+                <link rel="icon" type="image/png" href="/theme/website/assets/images/logo.png" />
+                        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/theme/website/assets/images/touch-icon/touch-icon-retina.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/theme/website/assets/images/touch-icon/touch-icon-ipad.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/theme/website/assets/images/touch-icon/touch-icon.png" />
+        <link rel="icon" sizes="114x114" href="/theme/website/assets/images/touch-icon/touch-icon-retina.png" />
+        <meta name="theme-color" content="#001A70">
+                <meta name="msapplication-navbutton-color" content="#001A70">
+                <meta name="apple-mobile-web-app-status-bar-style" content="#001A70">
+        <script type="text/javascript" defer>window.gdprAppliesGlobally=true;(function(){function n(e){if(!window.frames[e]){if(document.body&&document.body.firstChild){var t=document.body;var r=document.createElement("iframe");r.style.display="none";r.name=e;r.title=e;t.insertBefore(r,t.firstChild)}else{setTimeout(function(){n(e)},5)}}}function e(r,a,o,c,d){function e(e,t,r,n){if(typeof r!=="function"){return}if(!window[a]){window[a]=[]}var i=false;if(d){i=d(e,n,r)}if(!i){window[a].push({command:e,version:t,callback:r,parameter:n})}}e.stub=true;e.stubVersion=2;function t(n){if(!window[r]||window[r].stub!==true){return}if(!n.data){return}var i=typeof n.data==="string";var e;try{e=i?JSON.parse(n.data):n.data}catch(t){return}if(e[o]){var a=e[o];window[r](a.command,a.version,function(e,t){var r={};r[c]={returnValue:e,success:t,callId:a.callId};if(n.source){n.source.postMessage(i?JSON.stringify(r):r,"*")}},a.parameter)}}if(typeof window[r]!=="function"){window[r]=e;if(window.addEventListener){window.addEventListener("message",t,false)}else{window.attachEvent("onmessage",t)}}}e("__tcfapi","__tcfapiBuffer","__tcfapiCall","__tcfapiReturn");n("__tcfapiLocator");(function(e,t){var r=document.createElement("link");r.rel="preconnect";r.as="script";var n=document.createElement("link");n.rel="dns-prefetch";n.as="script";var i=document.createElement("link");i.rel="preload";i.as="script";var a=document.createElement("script");a.id="spcloader";a.type="text/javascript";a["async"]=true;a.charset="utf-8";var o="https://sdk.privacy-center.org/"+e+"/loader.js?target_type=notice&target="+t;if(window.didomiConfig&&window.didomiConfig.user){var c=window.didomiConfig.user;var d=c.country;var s=c.region;if(d){o=o+"&country="+d;if(s){o=o+"&region="+s}}}r.href="https://sdk.privacy-center.org/";n.href="https://sdk.privacy-center.org/";i.href=o;a.src=o;var f=document.getElementsByTagName("script")[0];f.parentNode.insertBefore(r,f);f.parentNode.insertBefore(n,f);f.parentNode.insertBefore(i,f);f.parentNode.insertBefore(a,f)})("b5f15322-e0bf-47cd-ac5b-24d2bf7c7632","NpQ3g8Td")})();</script>
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://izi-by-edf.fr/",
+            "logo": "https://izi-by-edf.fr/theme/website/assets/images/icon-svg/logo.svg",
+            "name": "IZI by EDF",
+            "legalName": "IZI SOLUTIONS DURABLES",
+            "description": "Faites le choix de la simplicité pour vos travaux de rénovation énergétique et d'installation de borne de recharge avec IZI by EDF !",
+            "email": "contact@izi-by-edf.fr",
+            "telephone": "0180846060",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Colisée Gardens, 10 Av. de l'Arche",
+                "addressLocality": "Courbevoie",
+                "addressCountry": "FR",
+                "addressRegion": "Ile-de-France",
+                "postalCode": "92400"
+            },
+            "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "value": 100
+            },
+            "foundingDate": "2014-04-07"
+            }
+        </script>
+
+        <!-- Google Tag Manager -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5RJTTW4');</script>
+        <!-- End Google Tag Manager -->
+        <!-- Google Tag Manager bis -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://gtm-server.izi-by-edf.fr/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KKRS4G5K');</script>
+        <!-- End Google Tag Manager bis -->
+                    <link rel="stylesheet" href="/theme/website/assets/fontawesome/css/all.min.css">
+
+
+<link rel="preload" href="/theme/website/izi-assets/style.ef8adcf357.css" as="style"/>
+<link rel="stylesheet" href="/theme/website/izi-assets/style.ef8adcf357.css"/>
+
+<link rel="preload" href="/theme/website/assets/fonts/EDF2020-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/theme/website/assets/fonts/EDF2020-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/theme/website/assets/fonts/EDF2020-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+            </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.gtm-server.izi-by-edf.fr/ns.html?id=GTM-KKRS4G5K"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <!-- Google Tag Manager (noscript) bis -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RJTTW4"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) bis -->
+
+                                                                                                                                                                                                                                                                                                                                
+                                    <div class="m-auto max-w-screen-xl">
+  <header class="relative z-10 bg-white shadow-xs transition-shadow">
+            <div class="mx-auto flex w-full max-w-[1200px] items-center gap-5 bg-white px-4 md:bg-transparent lg:px-0">
+      <div class="flex-1 lg:min-h-[108px]">
+        <div class="flex items-center bg-transparent py-2 text-sm sm:gap-8 md:gap-14 md:py-1">
+          <div class="flex flex-1 items-center gap-5 md:gap-8">
+            <button id="burger-toggle" type="button" class="h-6 w-6 text-secondary-500 md:hidden">
+              <i class="fas fa-bars align-middle text-base leading-none"></i>
+            </button>
+            <a href="/">
+              
+<picture             >
+    <source
+                    srcset="/theme/website/assets/images/icon-svg/logo.svg?v.2"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/icon-svg/logo.svg?v.2"                media="(min-width: 768px)"
+    >
+    <img
+                    src="/theme/website/assets/images/icon-svg/logo.svg?v.2"
+            class="block h-10 md:h-14"                                                    alt="IZI by EDF"
+                        >
+</picture>
+            </a>
+            <div class="hidden flex-1 sm:block">
+              <form class="relative flex w-full flex-nowrap items-center justify-between" role="search">
+                <div id="searchContainer" class="relative flex w-full">
+  <input id="searchBar" type="text" aria-label="Rechercher" name="hp-search-large-input"
+    class="h-10 w-full animate-pulse overflow-ellipsis rounded-full border border-solid border-grey-100 bg-grey-50 py-3 pl-4 pr-9 text-sm placeholder-grey-900 placeholder-opacity-60 outline-none"
+    placeholder="Rechercher un produit, une offre de travaux.." autocomplete="off" spellcheck="false" disabled>
+  <span id="searchButton"
+    class="absolute right-1 top-1 flex h-8 w-8 cursor-pointer rounded-full p-2 text-secondary-500 transition-colors hover:text-primary-600">
+    <i class="fa fa-search"></i>
+  </span>
+
+  <div id="resultContainer"
+    class="absolute top-full z-50 mt-2 hidden h-fit w-full items-center justify-center overflow-y-auto rounded-b-2xl border border-grey-100 bg-white px-2 py-4 shadow-md">
+    <div class="flex h-fit flex-col gap-2 px-2">
+      <p class="font-edf text-lg font-bold leading-[125%] text-secondary-500">Vous cherchez :</p>
+      <span id="loader"
+        class="!hidden h-5 w-5 animate-spin rounded-full border-2 border-primary-600 border-r-transparent"></span>
+      <ul id="resultList"
+        class="[&_li:hover]:bg-primary-400/10 [&_li>img]:h-14 [&_li>img]:w-14 [&_li>img]:rounded [&_li>img]:object-cover [&_li]:flex [&_li]:cursor-pointer [&_li]:items-center [&_li]:gap-4 [&_li]:rounded-md [&_li]:p-2 [&_li_div]:line-clamp-2 [&_li_div]:overflow-ellipsis">
+      </ul>
+      <div id="resultCount" class="font-bold"></div>
+      <span id="btnGoToAll"
+        class="obfc inline-flex w-full cursor-pointer items-center justify-center rounded-lg border-none bg-primary-600 px-4 py-2.5 text-center font-edf text-base font-bold text-white no-underline outline-0 transition-all hover:bg-primary-800 hover:text-white focus:bg-primary-800 focus:text-white disabled:cursor-not-allowed disabled:bg-grey-100 disabled:text-grey-500"
+        data-obfc=""
+        tabindex="0"
+        role="link"
+      >
+        <span class="text-white">Voir tous les résultats</span>
+      </span>
+    </div>
+  </div>
+</div>              </form>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 bg-transparent text-sm md:gap-6">
+            <a href="/blog/" title="Le blog"
+              class="hidden font-edf text-sm font-normal leading-5 text-secondary-500 transition-colors hover:text-primary-600 md:block">Le blog</a>
+            <a href="/contact" title="Contact"
+              class="hidden font-edf text-sm font-normal leading-5 text-secondary-500 transition-colors hover:text-primary-600 md:block">Contact</a>
+            <a href="tel:0180846060"
+              class="inline-flex items-center justify-start gap-1 rounded-xl bg-primary-50 px-2 py-1 text-secondary-500 transition-colors hover:text-primary-600">
+              <i class="fa-solid fa-phone flex h-6 w-6 items-center justify-center text-base"></i>
+              <div class="flex flex-col font-edf">
+                <span class="text-base font-bold md:text-sm">01 80 84 60 60</span>
+                <p class="text-sm font-normal">Prix d'un appel local</p>
+              </div>
+            </a>
+            <button id="mobile-search-toggle" type="button" class="h-6 w-6 text-secondary-500 sm:hidden" title="Rechercher">
+              <i class="fa fa-search align-middle text-base"></i>
+            </button>
+          </div>
+        </div>
+        <div
+          id="navbar-menu"
+          class="absolute left-0 top-0 z-40 flex h-[100dvh] w-full -translate-x-[100vw] flex-col bg-white transition-transform duration-500 peer-checked:translate-x-0 md:relative md:inset-0 md:h-auto md:translate-x-0 md:border-none"
+          >
+          <div class="z-10 flex items-center gap-5 bg-white p-4 shadow-xs md:!hidden">
+            <button id="close-navbar-mobile" type="button" class="text-secondary-500 md:hidden"><i class="fa-solid fa-xmark"></i></button>
+            <a href="/">
+              
+<picture             >
+    <source
+                    srcset="/theme/website/assets/images/icon-svg/logo.svg?v.2"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/icon-svg/logo.svg?v.2"                media="(min-width: 768px)"
+    >
+    <img
+                    src="/theme/website/assets/images/icon-svg/logo.svg?v.2"
+            class="block h-10"                                                    alt="IZI by EDF"
+                        >
+</picture>
+            </a>
+          </div>
+          <div class="flex h-full w-full flex-col justify-between sm:h-auto sm:gap-6 md:block">
+            <ul
+              class="flex flex-col gap-8 overflow-y-hidden px-6 pt-6 md:flex-row md:justify-between md:px-0 md:pt-0"
+              data-item-list="">
+                                                                      <li
+                class="relative flex w-full items-baseline justify-between text-center font-bold md:w-auto lg:flex-none ">
+                                  <span data-obfc="aHR0cHM6Ly93d3cuaXppLWJ5LWVkZi1yZW5vdi5mci9yZW5vdmF0aW9uLWVuZXJnZXRpcXVl" data-class="itemhttps:--www.izi-by-edf-renov.fr-renovation-energetique"
+                    data-gtm="menu|%repository%-goto|%pagePath%"
+                    class="relative flex cursor-pointer items-center font-edf text-secondary-500 hover:text-primary-600 md:static md:m-auto md:pb-4 md:pt-3"
+                    tabindex="0"
+                    role="link"
+                  >
+                                                            Rénovation énergétique
+                  </span>
+                              </li>
+                            <li
+                class="relative flex w-full items-baseline justify-between text-center font-bold md:w-auto lg:flex-none ">
+                                  <span data-obfc="aHR0cHM6Ly93d3cuaXppLWJ5LWVkZi1yZW5vdi5mci9jaGF1ZmZhZ2U=" data-class="itemhttps:--www.izi-by-edf-renov.fr-chauffage"
+                    data-gtm="menu|%repository%-goto|%pagePath%"
+                    class="relative flex cursor-pointer items-center font-edf text-secondary-500 hover:text-primary-600 md:static md:m-auto md:pb-4 md:pt-3"
+                    tabindex="0"
+                    role="link"
+                  >
+                                                            Chauffage &amp; climatisation
+                  </span>
+                              </li>
+                            <li
+                class="relative flex w-full items-baseline justify-between text-center font-bold md:w-auto lg:flex-none ">
+                                  <span data-obfc="aHR0cHM6Ly93d3cuaXppLWJ5LWVkZi1yZW5vdi5mci90cmF2YXV4LWlzb2xhdGlvbg==" data-class="itemhttps:--www.izi-by-edf-renov.fr-travaux-isolation"
+                    data-gtm="menu|%repository%-goto|%pagePath%"
+                    class="relative flex cursor-pointer items-center font-edf text-secondary-500 hover:text-primary-600 md:static md:m-auto md:pb-4 md:pt-3"
+                    tabindex="0"
+                    role="link"
+                  >
+                                                            Isolation
+                  </span>
+                              </li>
+                            <li
+                class="relative flex w-full items-baseline justify-between text-center font-bold md:w-auto lg:flex-none ">
+                                  <span data-obfc="aHR0cHM6Ly93d3cuaXppLWJ5LWVkZi1yZW5vdi5mci9tZW51aXNlcmllcw==" data-class="itemhttps:--www.izi-by-edf-renov.fr-menuiseries"
+                    data-gtm="menu|%repository%-goto|%pagePath%"
+                    class="relative flex cursor-pointer items-center font-edf text-secondary-500 hover:text-primary-600 md:static md:m-auto md:pb-4 md:pt-3"
+                    tabindex="0"
+                    role="link"
+                  >
+                                                            Portes &amp; fenêtres
+                  </span>
+                              </li>
+                            <li
+                class="relative flex w-full items-baseline justify-between text-center font-bold md:w-auto lg:flex-none ">
+                                  <a href="/univers/electricite" data-class="item-univers-electricite"
+                    data-gtm="menu|%repository%-goto|%pagePath%"
+                    class="relative flex items-center font-edf text-secondary-500 hover:text-primary-600 md:static md:m-auto md:pb-4 md:pt-3">
+                                                            Rénovation électrique
+                  </a>
+                              </li>
+                            <li
+                class="relative flex w-full items-baseline justify-between text-center font-bold md:w-auto lg:flex-none ">
+                                  <a href="/univers/borne-recharge" data-class="item-univers-borne-recharge"
+                    data-gtm="menu|%repository%-goto|%pagePath%"
+                    class="relative flex items-center font-edf text-secondary-500 hover:text-primary-600 md:static md:m-auto md:pb-4 md:pt-3">
+                                                            Borne de recharge
+                  </a>
+                              </li>
+                          </ul>
+            <div class="block md:hidden">
+              <ul class="flex flex-col items-center justify-between gap-6 py-6 pl-6 md:flex-row">
+                <li class="relative inline-flex h-auto w-full overflow-hidden md:w-auto">
+                  <a href="/blog/" title="Le blog" class="flex items-center font-edf text-secondary-500">Le blog</a>
+                </li>
+                <li class="relative inline-flex h-auto w-full overflow-hidden md:w-auto">
+                  <a href="/contact" title="Contact" class="flex items-center font-edf text-secondary-500">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="search-mobile-container" class="hidden w-full gap-4 px-4 py-2" data-search-mobile="">
+      <form class="relative flex w-full flex-nowrap items-center justify-between" role="search">
+        <div id="searchContainerMobile" class="relative flex w-full">
+  <input id="searchBarMobile" type="text" aria-label="Rechercher" name="hp-search-large-input"
+    class="h-10 w-full animate-pulse overflow-ellipsis rounded-full border border-solid border-grey-100 bg-grey-50 py-3 pl-4 pr-9 text-sm placeholder-grey-900 placeholder-opacity-60 outline-none"
+    placeholder="Rechercher un produit, une offre de travaux.." autocomplete="off" spellcheck="false" disabled>
+  <span id="searchButtonMobile"
+    class="absolute right-1 top-1 flex h-8 w-8 cursor-pointer rounded-full p-2 text-secondary-500 transition-colors hover:text-primary-600">
+    <i id="searchButtonMobile" class="fa fa-search"></i>
+  </span>
+
+  <div id="resultContainerMobile"
+    class="absolute top-full z-50 mt-2 hidden h-fit w-full items-center justify-center overflow-y-auto rounded-b-2xl border border-grey-100 bg-white px-2 py-4 shadow-md">
+    <div class="flex h-fit flex-col gap-2 px-2">
+      <p class="font-edf text-lg font-bold leading-[125%] text-secondary-500">Vous cherchez :</p>
+      <span id="loaderMobile"
+        class="!hidden h-5 w-5 animate-spin rounded-full border-2 border-primary-600 border-r-transparent"></span>
+      <ul id="resultListMobile"
+        class="[&_li:hover]:bg-primary-400/10 [&_li>img]:h-14 [&_li>img]:w-14 [&_li>img]:rounded [&_li>img]:object-cover [&_li]:flex [&_li]:cursor-pointer [&_li]:items-center [&_li]:gap-4 [&_li]:rounded-md [&_li]:p-2 [&_li_div]:line-clamp-2 [&_li_div]:overflow-ellipsis">
+      </ul>
+      <div id="resultCountMobile" class="font-bold"></div>
+      <span id="btnGoToAllMobile"
+        class="obfc inline-flex w-full cursor-pointer items-center justify-center rounded-lg border-none bg-primary-600 px-4 py-3 text-center font-edf text-base font-bold text-white no-underline outline-0 transition-all hover:bg-primary-800 hover:text-white focus:bg-primary-800 focus:text-white disabled:cursor-not-allowed disabled:bg-grey-100 disabled:text-grey-500"
+        data-obfc=""
+        tabindex="0"
+        role="link"
+      >
+        <span class="text-white">Voir tous les résultats</span></span>
+    </div>
+  </div>
+</div>      </form>
+
+      <button id="close-search-mobile" type="reset" class="text-secondary-500"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </header>
+</div>                    
+                        
+        <section id="simulator-irv-header" class="flex justify-center">
+        <div class="w-full max-w-screen-lg px-4 lg:px-0">
+                                        
+
+<div id="headerBlock" class="flex gap-4 flex-col pb-10 md:pb-14 pt-2 md:pt-4">
+                        <div>
+                <div class="inline-flex w-auto flex-wrap">
+    <ul class="inline-flex w-full max-w-full flex-wrap items-center gap-x-2 text-base sm:w-auto">
+        <li class="inline-block">
+            <a class="font-edf font-normal " href="/">Accueil</a>
+        </li>
+                                    <li class="flex items-center gap-x-2">
+                    <i class="fas fa-angle-right text-xs text-primary-600"></i>
+                    <a class="font-edf font-normal " href="/univers/borne-recharge">Borne de recharge</a>
+                </li>
+                                        <li class="flex items-center gap-x-2">
+                <i class="fas fa-angle-right text-xs text-primary-600"></i>
+                <span class="font-edf font-normal ">Simulateur temps de recharge</span>
+            </li>
+            </ul>
+</div>
+            </div>
+                <div class="flex flex-col-reverse gap-6 sm:flex-row">
+        <div class="w-full sm:w-7/12">
+                            <h1 class="font-edf text-4xl font-extrabold leading-[125%] md:text-5xl md:leading-[125%] text-secondary-500 mb-4">Simulateur de temps de recharge pour voiture électrique</h1>
+                        <div class="float-none mb-4 w-11/12 md:mb-6">
+                <p>Borne de recharge ou prise renforcée : comparez le temps de charge de votre voiture électrique, sélectionnez la solution qui correspond à vos usages,  à votre budget… Et faites-la installer, en toute simplicité.&nbsp;</p>
+            </div>
+                            <div class="mt-6 flex flex-col sm:flex-row md:mt-8">
+                                                        </div>
+                                                                            <div class="mb-2 mt-4 inline-block w-full sm:mt-6 md:mt-8">
+                     <div
+    class="trustpilot-widget"
+    data-locale="fr-FR"
+    data-template-id="5419b637fa0340045cd0c936"
+    data-businessunit-id="5d89de976b2e5e000113c43c"
+    data-style-height="20px"
+    data-style-width="100%"
+    data-theme="light"
+    data-stars="1,2,3,4,5"
+    data-no-reviews="hide"
+    data-scroll-to-list="true"
+    data-allow-robots="true">
+        <a href="https://fr.trustpilot.com/review/izi-by-edf.fr" target="_blank" rel="noopener">Trustpilot</a>
+</div>
+                </div>
+                    </div>
+        
+          
+                                   
+            
+<picture  class="sm:w-5/12 float-none overflow-hidden "             >
+    <source
+                    srcset="/thumbs/900×10000/simulateur-hub/2023/03/Rectangle-47.jpg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/thumbs/750×10000/simulateur-hub/2023/03/Rectangle-47.jpg"                media="(min-width: 768px)"
+    >
+    <img
+                    src="/thumbs/750×10000/simulateur-hub/2023/03/Rectangle-47.jpg"
+            class="rounded-2xl block h-full w-full object-cover"                                                    alt="borne wallbox sur pied"
+                        >
+</picture>
+    </div>
+</div>
+        </div>
+    </section>
+    
+                                                                            
+    <article class="flex justify-center">
+        <div class="flex w-full max-w-screen-lg flex-col gap-20 px-4 py-10 md:gap-28 md:py-14 lg:px-0">
+                                        <section class="rounded-3xl bg-grey-50 px-10 py-12">
+                    <h2 class="font-edf text-2xl font-bold leading-[125%] md:text-[1.75rem] text-secondary-500 mb-4 text-center sm:mb-6 md:mb-8">Calculer le temps de recharge de sa voiture électrique, c'est IZI​</h2>
+                                            <div class="mx-auto mb-6 w-full p-0 text-center sm:mb-8 sm:w-11/12 md:mb-10 md:w-9/12">
+                            <p>Sélectionnez <strong>la marque, le</strong> <strong>modèle et la version </strong>de votre voiture électrique. Puis ajustez le<strong> niveau de charge</strong> du véhicule (20 à 80 % pour une recharge optimale). Enfin, comparez&nbsp;les différentes<strong> solutions de recharge à domicile</strong> (prise renforcée 3,7 kW, borne 7 kW et borne 22 kW).</p>
+<p><br></p>
+<p>Prêt&nbsp;? A vous de jouer !</p>
+                        </div>
+                                        <div class="-mx-2 flex flex-col gap-y-4 md:-mx-3 md:flex-row md:gap-y-6" id="vehicule" data-is-hub="true" data-default-brand="Renault" data-default-model="Zoe">
+    <div class="w-full px-2 md:w-3/12 md:px-3">
+        <p class="font-edf text-xl font-bold leading-[125%] md:text-2xl text-secondary-500 mb-4 md:mb-6">Type de véhicule</p>
+        <div class="flex flex-col sm:flex-row md:flex-col">
+            <div class="mr-4 w-full sm:mr-6 sm:w-7/12 md:mr-8 md:w-full">
+                <div class="relative mb-4 md:mb-6">
+                    <i class="fas fa-chevron-down z-ind-3 pointer-events-none absolute right-2 top-2/4 -translate-y-1/2 text-base text-secondary-500"></i>
+                    <select class="relative block w-full appearance-none border border-solid border-grey-300 p-4 bg-white leading-5 transition-all rounded-lg "
+                            name="brand"
+                            id="brand"
+                            disabled="disabled"
+                    >
+                        <option value="Renault" selected="selected">Renault</option>
+                    </select>
+                </div>
+                <div class="relative mb-4 md:mb-6">
+                    <i class="fas fa-chevron-down z-ind-3 pointer-events-none absolute right-2 top-2/4 -translate-y-1/2 text-base text-secondary-500"></i>
+                    <select class="relative block w-full appearance-none rounded-lg border border-solid border-grey-300 p-4 bg-white leading-5 transition-all "
+                            name="model"
+                            id="model"
+                            disabled="disabled"
+                    >
+                        <option value="Zoe" selected="selected">Zoe</option>
+                    </select>
+                </div>
+                <div class="relative mb-4 md:mb-6">
+                    <i class="fas fa-chevron-down z-ind-3 pointer-events-none absolute right-2 top-2/4 -translate-y-1/2 text-base text-secondary-500"></i>
+                    <select class="relative block w-full appearance-none rounded-lg border border-solid border-grey-300 bg-white p-4 leading-5 transition-all"
+                            name="version"
+                            id="version"
+                            disabled="disabled"
+                    >
+                                                   <option value="50 kWh - R135"  selected="selected"                                 data-charge-capacity=22
+                                data-battery-capacity=50>
+                                    50 kWh - R135
+                            </option>
+                                                   <option value="50 kWh - R110"                                 data-charge-capacity=22
+                                data-battery-capacity=50>
+                                    50 kWh - R110
+                            </option>
+                                                   <option value="40 kWh - R110"                                 data-charge-capacity=22
+                                data-battery-capacity=40>
+                                    40 kWh - R110
+                            </option>
+                                                   <option value="40 kWh - R75"                                 data-charge-capacity=22
+                                data-battery-capacity=40>
+                                    40 kWh - R75
+                            </option>
+                                                   <option value="40 kWh - R90"                                 data-charge-capacity=22
+                                data-battery-capacity=40>
+                                    40 kWh - R90
+                            </option>
+                                                   <option value="40 kWh - Q90"                                 data-charge-capacity=22
+                                data-battery-capacity=40>
+                                    40 kWh - Q90
+                            </option>
+                                                   <option value="22 kWh - R240"                                 data-charge-capacity=22
+                                data-battery-capacity=22>
+                                    22 kWh - R240
+                            </option>
+                                                   <option value="22 kWh - R210/Q210"                                 data-charge-capacity=22
+                                data-battery-capacity=22>
+                                    22 kWh - R210/Q210
+                            </option>
+                                                   <option value="22 kWh - Q90"                                 data-charge-capacity=22
+                                data-battery-capacity=22>
+                                    22 kWh - Q90
+                            </option>
+                                           </select>
+                </div>
+            </div>
+            <div class="flex w-full flex-col justify-end self-center sm:w-5/12 md:w-full">
+                <p class="font-edf text-xl font-bold leading-[125%] md:text-2xl text-secondary-500 mb-4">Niveau de charge</p>
+                <div class="flex w-full items-center pb-4 pt-8 sm:pt-10 md:pb-6 md:pt-12">
+                    <i class="fas fa-battery-empty text-2xl text-grey-300"></i>
+                    <div class="w-10/12">
+                        <div id="slider"></div>
+                    </div>
+                    <i class="fas fa-battery-three-quarters text-2xl text-grey-300"></i>
+                </div>
+            </div>
+        </div>
+        <div class="border-grey-color mb-4 flex w-full rounded-2xl border border-solid border-grey-300">
+            <div class="w-full overflow-hidden sm:w-5/12 md:w-full">
+                <img class="w-full object-cover" id="pictureCar"
+                     class="h-44"
+                     src="/theme/website/assets/images/simulateur-voiture/vignette/renault_zoe.png"
+                     alt="renault_zoe"
+                />
+            </div>
+        </div>
+    </div>
+    <div class="w-full px-2 md:w-9/12 md:px-3">
+                <span data-obfc="L3BhcmNvdXJzL2luc3RhbGxhdGlvbi1kLXVuZS1ib3JuZS1kZS1yZWNoYXJnZS1kZS12b2l0dXJlLWVsZWN0cmlxdWUtb3UtaHlicmlkZS1yZWNoYXJnZWFibGU=" class="inline-flex w-full cursor-pointer items-center justify-center rounded-lg border-2 border-primary-600 bg-primary-600 outline outline-none text-center font-edf font-bold text-white no-underline transition-all hover:text-white hover:border-primary-800 hover:bg-primary-800 focus-visible:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 disabled:bg-grey-100 disabled:border-grey-100 disabled:text-grey-900 disabled:cursor-not-allowed px-4 py-2 text-base mb-4 self-center whitespace-nowrap sm:hidden sm:w-1/2 md:mb-6" tabindex="0" role="link">
+            J'installe ma borne
+        </span>
+        <p class="font-edf text-xl font-bold leading-[125%] md:text-2xl text-secondary-500 mb-4 hidden md:mb-6 md:block">Type de Recharge</p>
+        <div class="flex flex-col rounded-3xl border border-solid border-grey-300">
+            <div class="flex flex-col sm:flex-row [&_.simulator-card:nth-child(-n+2)]:before:absolute [&_.simulator-card:nth-child(-n+2)]:before:right-0 [&_.simulator-card:nth-child(-n+2)]:before:top-1/4 [&_.simulator-card:nth-child(-n+2)]:before:z-10 [&_.simulator-card:nth-child(-n+2)]:before:block [&_.simulator-card:nth-child(-n+2)]:before:h-[324px] [&_.simulator-card:nth-child(-n+2)]:before:w-px [&_.simulator-card:nth-child(-n+2)]:before:bg-grey-300 [&_.simulator-card:nth-child(-n+2)]:before:content-['']">
+                                                    <div class="simulator-card relative w-full pb-4 sm:w-4/12 md:pb-6">
+    <div class="overflow-hidden">
+        <div class="flex flex-col items-center">
+            <div class="flex w-full flex-col p-4 pt-6 sm:items-center sm:pt-8 md:flex-row md:p-6 md:pt-10">
+                    
+<picture  class="mr-2 hidden w-4/12 shrink-0 rounded-2xl sm:flex md:w-5/12"             >
+    <source
+                    srcset="/theme/website/assets/images/simulateur-voiture/prise-renforcee.svg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/simulateur-voiture/prise-renforcee.svg"                media="(min-width: 768px)"
+    >
+    <img
+                    src="/theme/website/assets/images/simulateur-voiture/prise-renforcee.svg"
+            class="object-contain w-full h-full"                                                    alt="Prise renforcée 3,7kW"
+                        >
+</picture>
+                <p class="font-edf text-lg font-bold leading-[125%] md:text-xl text-secondary-500 w-8/12 text-center sm:w-11/12 md:w-full md:text-left">Prise renforcée <span class="w-full">3,7kW</span></p>
+            </div>
+            <div class="flex w-full flex-col md:items-center">
+                <div class="flex w-full flex-col items-center">
+                    <p class="mb-2 mt-4 hidden font-edf font-bold text-default sm:block md:mt-6">Temps de recharge</p>
+                    <div class="speedometer-container relative hidden h-[100px] p-4 sm:inline-block md:p-6">
+                        <div class="speedometer-indicator h-[81px] overflow-hidden">
+                            <span class="speedometer inline-block h-[123px] w-[123px] rounded-full border-[9px] border-solid border-primary-600"></span>
+                        </div>
+                        <span class="absolute -left-1 bottom-1 text-xs text-grey-700 md:left-1">1h</span>
+                        <span class="absolute -top-1 left-[46%] text-xs text-grey-700 md:top-1">10h</span>
+                        <span class="absolute -right-2 bottom-1 text-xs text-grey-700 md:right-0">20h</span>
+                        <span class="speedometer-needle-container absolute bottom-3 left-0 right-[14px] mx-auto w-0" id="speedometerprise" style="--value:20">
+                              
+<picture  class="speedometer-needle relative block h-[43px] w-[14px] origin-bottom rotate-[calc((var(--value)*1.8deg)-90deg)] transition-transform"             >
+    <source
+                    srcset="/theme/website/assets/images/simulateur-voiture/needle_barometre.svg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/simulateur-voiture/needle_barometre.svg"                media="(min-width: 768px)"
+    >
+    <img
+                    src="/theme/website/assets/images/simulateur-voiture/needle_barometre.svg"
+            class="mt-2 h-full w-full object-contain"                            >
+</picture>
+                        </span>
+                    </div>
+                    <span class="font-edf text-lg font-bold leading-[125%] text-secondary-500 absolute right-4 top-0.5 mb-4 mt-4 rounded-lg bg-grey-100 p-2 sm:relative sm:right-0 sm:top-0 md:mb-6" id="prise">03H34</span>
+                    <div class="mb-4 w-full sm:w-11/12 md:mb-6">
+                        <ul class="pl-6 sm:pl-8 md:pl-10">
+                            <li class="list-icon-check relative mb-4 w-full px-2 md:px-3">Adaptée aux batteries de faible capacité</li>
+                            <li class="list-icon-check relative mb-4 w-full px-2 md:px-3">Éligible à la TVA réduite <span class="flex-desktop w-full">5,5 %*</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="simulator-card relative w-full pb-4 sm:w-4/12 md:pb-6">
+    <div class="overflow-hidden">
+        <div class="flex flex-col items-center">
+            <div class="flex w-full flex-col p-4 pt-6 sm:items-center sm:pt-8 md:flex-row md:p-6 md:pt-10">
+                    
+<picture  class="mr-2 hidden w-4/12 shrink-0 rounded-2xl sm:flex md:w-5/12"             >
+    <source
+                    srcset="/theme/website/assets/images/simulateur-voiture/borne.svg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/simulateur-voiture/borne.svg"                media="(min-width: 768px)"
+    >
+    <img
+                    src="/theme/website/assets/images/simulateur-voiture/borne.svg"
+            class="object-contain w-full h-full"                                                    alt="Borne de recharge 7kW"
+                        >
+</picture>
+                <p class="font-edf text-lg font-bold leading-[125%] md:text-xl text-secondary-500 w-8/12 text-center sm:w-11/12 md:w-full md:text-left">Borne de recharge <span class="w-full">7kW</span></p>
+            </div>
+            <div class="flex w-full flex-col md:items-center">
+                <div class="flex w-full flex-col items-center">
+                    <p class="mb-2 mt-4 hidden font-edf font-bold text-default sm:block md:mt-6">Temps de recharge</p>
+                    <div class="speedometer-container relative hidden h-[100px] p-4 sm:inline-block md:p-6">
+                        <div class="speedometer-indicator h-[81px] overflow-hidden">
+                            <span class="speedometer inline-block h-[123px] w-[123px] rounded-full border-[9px] border-solid border-primary-600"></span>
+                        </div>
+                        <span class="absolute -left-1 bottom-1 text-xs text-grey-700 md:left-1">1h</span>
+                        <span class="absolute -top-1 left-[46%] text-xs text-grey-700 md:top-1">10h</span>
+                        <span class="absolute -right-2 bottom-1 text-xs text-grey-700 md:right-0">20h</span>
+                        <span class="speedometer-needle-container absolute bottom-3 left-0 right-[14px] mx-auto w-0" id="speedometerborne1" style="--value:20">
+                              
+<picture  class="speedometer-needle relative block h-[43px] w-[14px] origin-bottom rotate-[calc((var(--value)*1.8deg)-90deg)] transition-transform"             >
+    <source
+                    srcset="/theme/website/assets/images/simulateur-voiture/needle_barometre.svg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/simulateur-voiture/needle_barometre.svg"                media="(min-width: 768px)"
+    >
+    <img
+                    src="/theme/website/assets/images/simulateur-voiture/needle_barometre.svg"
+            class="mt-2 h-full w-full object-contain"                            >
+</picture>
+                        </span>
+                    </div>
+                    <span class="font-edf text-lg font-bold leading-[125%] text-secondary-500 absolute right-4 top-0.5 mb-4 mt-4 rounded-lg bg-grey-100 p-2 sm:relative sm:right-0 sm:top-0 md:mb-6" id="borne1">01H53</span>
+                    <div class="mb-4 w-full sm:w-11/12 md:mb-6">
+                        <ul class="pl-6 sm:pl-8 md:pl-10">
+                            <li class="list-icon-check relative mb-4 w-full px-2 md:px-3">Convient au plus grand nombre de <span class="flex-mobile-tablet initial-display-m w-full">VE</span></li>
+                            <li class="list-icon-check relative mb-4 w-full px-2 md:px-3">Crédit d’Impôt et TVA <span class="flex-desktop w-full">5,5 %*</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="simulator-card relative w-full pb-4 sm:w-4/12 md:pb-6">
+    <div class="overflow-hidden">
+        <div class="flex flex-col items-center">
+            <div class="flex w-full flex-col p-4 pt-6 sm:items-center sm:pt-8 md:flex-row md:p-6 md:pt-10">
+                    
+<picture  class="mr-2 hidden w-4/12 shrink-0 rounded-2xl sm:flex md:w-5/12"             >
+    <source
+                    srcset="/theme/website/assets/images/simulateur-voiture/borne.svg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/simulateur-voiture/borne.svg"                media="(min-width: 768px)"
+    >
+    <img
+                    src="/theme/website/assets/images/simulateur-voiture/borne.svg"
+            class="object-contain w-full h-full"                                                    alt="Borne de recharge 22kW"
+                        >
+</picture>
+                <p class="font-edf text-lg font-bold leading-[125%] md:text-xl text-secondary-500 w-8/12 text-center sm:w-11/12 md:w-full md:text-left">Borne de recharge <span class="w-full">22kW</span></p>
+            </div>
+            <div class="flex w-full flex-col md:items-center">
+                <div class="flex w-full flex-col items-center">
+                    <p class="mb-2 mt-4 hidden font-edf font-bold text-default sm:block md:mt-6">Temps de recharge</p>
+                    <div class="speedometer-container relative hidden h-[100px] p-4 sm:inline-block md:p-6">
+                        <div class="speedometer-indicator h-[81px] overflow-hidden">
+                            <span class="speedometer inline-block h-[123px] w-[123px] rounded-full border-[9px] border-solid border-primary-600"></span>
+                        </div>
+                        <span class="absolute -left-1 bottom-1 text-xs text-grey-700 md:left-1">1h</span>
+                        <span class="absolute -top-1 left-[46%] text-xs text-grey-700 md:top-1">10h</span>
+                        <span class="absolute -right-2 bottom-1 text-xs text-grey-700 md:right-0">20h</span>
+                        <span class="speedometer-needle-container absolute bottom-3 left-0 right-[14px] mx-auto w-0" id="speedometerborne2" style="--value:20">
+                              
+<picture  class="speedometer-needle relative block h-[43px] w-[14px] origin-bottom rotate-[calc((var(--value)*1.8deg)-90deg)] transition-transform"             >
+    <source
+                    srcset="/theme/website/assets/images/simulateur-voiture/needle_barometre.svg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/simulateur-voiture/needle_barometre.svg"                media="(min-width: 768px)"
+    >
+    <img
+                    src="/theme/website/assets/images/simulateur-voiture/needle_barometre.svg"
+            class="mt-2 h-full w-full object-contain"                            >
+</picture>
+                        </span>
+                    </div>
+                    <span class="font-edf text-lg font-bold leading-[125%] text-secondary-500 absolute right-4 top-0.5 mb-4 mt-4 rounded-lg bg-grey-100 p-2 sm:relative sm:right-0 sm:top-0 md:mb-6" id="borne2">00H36</span>
+                    <div class="mb-4 w-full sm:w-11/12 md:mb-6">
+                        <ul class="pl-6 sm:pl-8 md:pl-10">
+                            <li class="list-icon-check relative mb-4 w-full px-2 md:px-3">Adaptée aux installations triphasées</li>
+                            <li class="list-icon-check relative mb-4 w-full px-2 md:px-3">Crédit d’Impôt et TVA <span class="flex-desktop w-full">5,5 %*</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        <span data-obfc="L3BhcmNvdXJzL2luc3RhbGxhdGlvbi1kLXVuZS1ib3JuZS1kZS1yZWNoYXJnZS1kZS12b2l0dXJlLWVsZWN0cmlxdWUtb3UtaHlicmlkZS1yZWNoYXJnZWFibGU=" class="inline-flex w-full cursor-pointer items-center justify-center rounded-lg border-2 border-primary-600 bg-primary-600 outline outline-none text-center font-edf font-bold text-white no-underline transition-all hover:text-white hover:border-primary-800 hover:bg-primary-800 focus-visible:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 disabled:bg-grey-100 disabled:border-grey-100 disabled:text-grey-900 disabled:cursor-not-allowed px-4 py-2 text-base m-auto mb-4 hidden self-center whitespace-nowrap sm:mb-6 sm:inline-flex sm:w-1/2 md:mb-8" tabindex="0" role="link">
+                J'installe ma borne
+            </span>
+        </div>
+    </div>
+</div>                                            <div class="flex justify-center">
+                            <div class="mt-4 flex w-full rounded-2xl p-4 shadow-sm md:mt-6 md:w-7/12 md:p-6">
+                                <span class="flex h-7 w-7 items-center justify-center rounded-full bg-grey-100 p-2 text-primary-600 md:h-10 md:w-10 md:p-4">
+                                    <i class="fas fa-lightbulb"></i>
+                                </span>
+                                <div class="ml-4 md:ml-6">
+                                    <p><strong>Le saviez-vous ?&nbsp;</strong></p>
+<p>👉&nbsp;À la maison, la recharge d’un véhicule électrique coûte d’après nos estimations en moyenne 3,29 € TTC/100 km de recharge<sup>(1)</sup>.<br>👉 L'acquisition et l'installation d'une borne de recharge pilotable par un professionnel vous rend éligible au crédit d'impôt de 500 €<sup>(2)</sup>.</p>
+<p></p>
+                                </div>
+                            </div>
+                        </div>
+                                    </section>
+                        
+                                    
+                                                                        <div>
+                                                                                                                                                                            
+<div id="Un-bon-plan,-ça-vous-branche-" class="flex w-full flex-col-reverse justify-between gap-8 sm:gap-10 md:items-center md:gap-12 sm:flex-row-reverse">
+    <div class="w-full sm:w-1/2">
+                    <h2 class="font-edf text-2xl font-bold leading-[125%] md:text-[1.75rem] text-secondary-500 mb-4 sm:mb-6 md:mb-8">Un bon plan, ça vous branche ?</h2>
+                <div class="markdown-style table-custom-style [&>div_table]:rounded-2xl [&_table_td]:text-left [&_table_tr_td:nth-child(1)]:font-edf [&_table_tr_td:nth-child(1)]:font-bold [&_table_tr_td_p]:mb-0">
+            <p>Faites installer votre borne de recharge par IZI by EDF et profitez de<strong> 20 % de réduction sur votre <a href="https://izivia.com/">Pass IZIVIA ACCESS</a></strong><sup>(3)</sup><strong><a href="https://izivia.com/"></a></strong>. En clair, grâce à votre pass,&nbsp;rechargez votre voiture électrique partout en France et en Europe et accédez à plus de 300 000 points de charge en Europe&nbsp;!</p>
+                    </div>
+    </div>
+    <div class="w-full sm:w-1/2">
+        <div class="flex flex-col">
+            <div class="overflow-hidden rounded-2xl">
+                                            
+<picture  class="flex lazy"             >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/thumbs/600×500/simulateur-hub/2024/01/borne-pass-Izivia.jpg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/thumbs/600×500/simulateur-hub/2024/01/borne-pass-Izivia.jpg"                media="(min-width: 768px)"
+    >
+    <img
+                    data-src="/thumbs/600×500/simulateur-hub/2024/01/borne-pass-Izivia.jpg"
+            src="/theme/website/assets/images/white.jpg"
+            class="lazy w-full h-full"
+                                                    data-alt="Pass recharge electrique borne"
+                        >
+</picture>
+                            </div>
+                    </div>
+    </div>
+</div>
+                                            </div>
+                                        
+                                                                                                                                                <section class="flex justify-center">
+                    <div class="w-full">
+                        
+<div class="flex flex-col gap-6 rounded-2xl sm:gap-8 md:flex-row md:gap-20  bg-white">
+    <div class="accordion-ccm flex w-full flex-col items-center md:w-1/2">
+                            
+<picture  class="w-full h-full h-72 md:h-[520px] lazy"             >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/thumbs/1100×10000/simulateur-hub/2024/07/aide-expert-devis.jpg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/thumbs/850×10000/simulateur-hub/2024/07/aide-expert-devis.jpg"                media="(min-width: 768px)"
+    >
+    <img
+                    data-src="/thumbs/320×240/simulateur-hub/2024/07/aide-expert-devis.jpg"
+            src="/theme/website/assets/images/white.jpg"
+            class="lazy w-full h-full object-cover rounded-2xl"
+                                                    data-alt="Comment ça marche avec IZI by EDF ?"
+                        >
+</picture>
+            </div>
+    <div class="flex w-full flex-col gap-8 md:w-1/2 md:gap-12">
+        <h2 class="font-edf text-2xl font-bold leading-[125%] md:text-[1.75rem] text-secondary-500 relative md:whitespace-nowrap">Comment ça marche avec IZI by EDF ?</h2>
+        <div class="relative pl-4">
+                            <div class="border-l-2 border-secondary-300 last:border-transparent">
+                    <input type="radio" name="ccm" id="ccm_1" class="peer sr-only" checked>
+                    <label for="ccm_1" class="inline-block relative w-full mb-0 pt-1 pl-8 peer-checked:[&>div]:grid-rows-[1fr] peer-checked:[&>section>i]:rotate-180 peer-checked:[&>div>span]:bg-secondary-300 peer-checked:[&>div>span]:text-white">
+                        <div class="absolute left-0 top-0 -translate-x-1/2">
+                            <span
+                                class="flex h-8 w-8 items-center justify-center rounded-full border-2 border-secondary-300 bg-white font-edf font-bold text-secondary-300 transition-colors">
+                                1
+                            </span>
+                        </div>
+                        <section class="flex cursor-pointer items-center justify-between gap-3">
+                            <p class="font-edf text-base font-bold text-secondary-500">Expliquez-nous votre projet</p>
+                            <i class="fas fa-chevron-down mr-1 rotate-0 text-secondary-500 transition-all duration-200"></i>
+                        </section>
+                        <div class="[&>p]:mb-4 pt-4 duration-500 overflow-hidden grid grid-rows-[0fr] transition-grid-template-rows">
+                            <p class="overflow-hidden font-edf font-normal">Remplissez en ligne notre formulaire de contact pour recevoir un pré-devis gratuit. Un conseiller IZI by EDF spécialisé en solutions de recharge vous recontacte pour estimer votre projet.</p>
+                        </div>
+                    </label>
+                </div>
+                            <div class="border-l-2 border-secondary-300 last:border-transparent">
+                    <input type="radio" name="ccm" id="ccm_2" class="peer sr-only" >
+                    <label for="ccm_2" class="inline-block relative w-full mb-0 pt-1 pl-8 peer-checked:[&>div]:grid-rows-[1fr] peer-checked:[&>section>i]:rotate-180 peer-checked:[&>div>span]:bg-secondary-300 peer-checked:[&>div>span]:text-white">
+                        <div class="absolute left-0 top-0 -translate-x-1/2">
+                            <span
+                                class="flex h-8 w-8 items-center justify-center rounded-full border-2 border-secondary-300 bg-white font-edf font-bold text-secondary-300 transition-colors">
+                                2
+                            </span>
+                        </div>
+                        <section class="flex cursor-pointer items-center justify-between gap-3">
+                            <p class="font-edf text-base font-bold text-secondary-500"> Laissez-vous guider</p>
+                            <i class="fas fa-chevron-down mr-1 rotate-0 text-secondary-500 transition-all duration-200"></i>
+                        </section>
+                        <div class="[&>p]:mb-4 pt-4 duration-500 overflow-hidden grid grid-rows-[0fr] transition-grid-template-rows">
+                            <p class="overflow-hidden font-edf font-normal">Votre conseiller vous accompagne dans le choix de votre borne de recharge. Une visite technique (4) peut être programmée, selon l'état de votre installation électrique, avant de recevoir votre devis !</p>
+                        </div>
+                    </label>
+                </div>
+                            <div class="border-l-2 border-secondary-300 last:border-transparent">
+                    <input type="radio" name="ccm" id="ccm_3" class="peer sr-only" >
+                    <label for="ccm_3" class="inline-block relative w-full mb-0 pt-1 pl-8 peer-checked:[&>div]:grid-rows-[1fr] peer-checked:[&>section>i]:rotate-180 peer-checked:[&>div>span]:bg-secondary-300 peer-checked:[&>div>span]:text-white">
+                        <div class="absolute left-0 top-0 -translate-x-1/2">
+                            <span
+                                class="flex h-8 w-8 items-center justify-center rounded-full border-2 border-secondary-300 bg-white font-edf font-bold text-secondary-300 transition-colors">
+                                3
+                            </span>
+                        </div>
+                        <section class="flex cursor-pointer items-center justify-between gap-3">
+                            <p class="font-edf text-base font-bold text-secondary-500">Faites installer votre borne l’esprit léger</p>
+                            <i class="fas fa-chevron-down mr-1 rotate-0 text-secondary-500 transition-all duration-200"></i>
+                        </section>
+                        <div class=" pt-4 duration-500 overflow-hidden grid grid-rows-[0fr] transition-grid-template-rows">
+                            <p class="overflow-hidden font-edf font-normal">Un installateur qualifié en IRVE (5) se rend chez vous, selon vos disponibilités. La qualité de votre installation est garantie !</p>
+                        </div>
+                    </label>
+                </div>
+                    </div>
+    </div>
+</div>                    </div>
+                </section>
+                        
+                                                    <div class="relative overflow-hidden rounded-3xl bg-grey-100 px-4 py-12 md:px-20">
+            <div class="relative mb-6 flex flex-col items-center text-center sm:mb-8 md:mb-10">
+                    
+<picture  class="block mb-4 lazy"             >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/theme/website/assets/images/icon-svg/faq-title.svg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/theme/website/assets/images/icon-svg/faq-title.svg"                media="(min-width: 768px)"
+    >
+    <img
+                    data-src="/theme/website/assets/images/icon-svg/faq-title.svg"
+            src="/theme/website/assets/images/white.jpg"
+            class="lazy "
+                                                    data-alt="FAQ-icon"
+                        >
+</picture>
+            <h2 class="font-edf text-2xl font-bold leading-[125%] md:text-[1.75rem] text-secondary-500">Vos questions les plus fréquentes</h2>
+        </div>
+        <div class="flex flex-col gap-4 md:gap-6">
+                    <div class="rounded-2xl bg-white p-4">
+                <details class="group peer relative cursor-pointer">
+                    <summary class="flex cursor-pointer list-none justify-between [&::-webkit-details-marker]:hidden">
+                        <span class="flex font-edf font-bold md:text-lg md:font-normal">Comment calculer le temps de recharge d'une voiture électrique ?​</span>
+                        <div class="relative flex h-6 w-6 shrink-0 items-center">
+                            <i class="fa fas fa-chevron-up absolute translate-x-1/2 text-secondary-500 opacity-0 group-open:opacity-100"></i>
+                            <i class="fa fas fa-chevron-down absolute translate-x-1/2 text-secondary-500 opacity-100 group-open:opacity-0"></i>
+                        </div>
+                    </summary>
+                </details>
+                <div class="markdown-style table-custom-style grid grid-rows-[0fr] transition-grid-template-rows peer-open:grid-rows-[1fr]">
+                    <div class="overflow-hidden">
+                        <div class="pt-4">
+                                                            <p>Le rapport de 2 données suffit à calculer le temps de recharge d'une voiture électrique :​</p>
+<p>La puissance du véhicule électrique, et plus précisément la<strong> batterie </strong>utilisable / la <strong>puissance de charge</strong> du point de recharge (par exemple 7,4 kW pour une borne monophasée).​</p>
+<p>​Imaginons que vous rouliez à bord d'une Fiat 500e 42 kWh, avec une batterie utilisable de 37,3 kWh, et que vous souhaitiez connaître le temps de charge de votre citadine électrique à partir d'une borne de recharge à domicile 7,4 kW. Voici le calcul à effectuer :​</p>
+<p>Temps de recharge = 37,3 kWh / 7,4 kW​</p>
+<p>= 5,04 soit 5 heures et 2 minutes (conversion en heures requise).​<br></p>
+<p>Une<strong> Fiat 500e 42 kWh met </strong>donc<strong> 5h02 </strong>pour recharger intégralement ses batteries (0 à 100 %) à <strong>sur </strong>une<strong> borne de recharge 7,4 kW</strong>. Elle devrait prendre environ 3h23 à partir d'une borne 11 kW adaptée au triphasé.​</p>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="rounded-2xl bg-white p-4">
+                <details class="group peer relative cursor-pointer">
+                    <summary class="flex cursor-pointer list-none justify-between [&::-webkit-details-marker]:hidden">
+                        <span class="flex font-edf font-bold md:text-lg md:font-normal">Quel est le coût moyen d'une recharge d'une voiture électrique ?​</span>
+                        <div class="relative flex h-6 w-6 shrink-0 items-center">
+                            <i class="fa fas fa-chevron-up absolute translate-x-1/2 text-secondary-500 opacity-0 group-open:opacity-100"></i>
+                            <i class="fa fas fa-chevron-down absolute translate-x-1/2 text-secondary-500 opacity-100 group-open:opacity-0"></i>
+                        </div>
+                    </summary>
+                </details>
+                <div class="markdown-style table-custom-style grid grid-rows-[0fr] transition-grid-template-rows peer-open:grid-rows-[1fr]">
+                    <div class="overflow-hidden">
+                        <div class="pt-4">
+                                                            <p>Une<strong> Fiat 500e 42 </strong>kWLa<strong> recharge d’un </strong>véhicule électrique<strong> à domicile </strong>coûte<strong> entre 2 et 4 €/100 </strong><strong>km</strong>.​<br></p>
+<p>Attention, le coût de recharge d’une voiture électrique dépend de plusieurs paramètres :​</p><ul><li><strong>Le </strong>modèle<strong> du </strong>véhicule électrique. Le plein d'une citadine électrique - Twingo E-Tech par exemple présentant une petite autonomie - n'est pas équivalent au plein d'un SUV ou d'une berline électrique (une Mégane E-Tech par exemple).​</li><li><strong>La puissance du point de recharge</strong> (une borne installée à domicile versus une borne de recharge publique). Plus la borne est puissante, plus la recharge coûte cher.​</li><li><strong>Le prix de la recharge</strong>. A la maison, si le calcul est relativement simple (multiplier le prix de l'électricité en forfait base ou heures creuses par le nombre kilowattheures consommés), les tarifs sont beaucoup plus variables sur voirie, d'un opérateur de recharge à l'autre.​</li></ul>
+<p>A lire : notre article sur le <a href="https://izi-by-edf.fr/blog/prix-recharge-electrique-octobre-2022/" target="_blank" rel="noreferrer">coût de la recharge d'une voiture électrique</a>.​</p>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="rounded-2xl bg-white p-4">
+                <details class="group peer relative cursor-pointer">
+                    <summary class="flex cursor-pointer list-none justify-between [&::-webkit-details-marker]:hidden">
+                        <span class="flex font-edf font-bold md:text-lg md:font-normal">Quelle puissance de charge choisir ?​</span>
+                        <div class="relative flex h-6 w-6 shrink-0 items-center">
+                            <i class="fa fas fa-chevron-up absolute translate-x-1/2 text-secondary-500 opacity-0 group-open:opacity-100"></i>
+                            <i class="fa fas fa-chevron-down absolute translate-x-1/2 text-secondary-500 opacity-100 group-open:opacity-0"></i>
+                        </div>
+                    </summary>
+                </details>
+                <div class="markdown-style table-custom-style grid grid-rows-[0fr] transition-grid-template-rows peer-open:grid-rows-[1fr]">
+                    <div class="overflow-hidden">
+                        <div class="pt-4">
+                                                            <p>La puissance de charge dépend en grande partie du <strong>type </strong>d'installation électrique<strong> à domicile</strong> : 7,4 kW si vous êtes en monophasé et 9 à 22 kW si vous êtes en triphasé. ​<br></p>
+<p>A l'extérieur, sur voirie, les puissances sont bien plus élevées qu'à domicile : de 22 kW jusqu'à 350 kW pour les superchargeurs. Encore faut-il que votre véhicule électrique soit compatible avec la recharge en courant continu (DC) équipé d'un connecteur<strong> Combo CCS</strong>. ​<br></p>
+<p>Tous les modèles de voiture électrique ne sont pas adaptés à la charge rapide. Une Fiat 500e 42 kWh recharge jusqu'à 85 kW maximum en charge rapide. Autrement dit, vous aurez beau charger votre Fiat 500e sur une borne 100, 200 voire 350 kWh, vos batteries ne se chargeront réellement qu'à hauteur de 85 kW.​<br></p>
+<p>Bon à savoir : les batteries de type lithium-ion offrent une meilleure comptabilité avec les charges lentes à accélérées. Les charges rapides et ultrarapides augmentent l'intensité de courant et surchauffent les composants de la batterie. Ce type de recharge peut donc à long terme détériorer votre batterie. ​<br></p>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="rounded-2xl bg-white p-4">
+                <details class="group peer relative cursor-pointer">
+                    <summary class="flex cursor-pointer list-none justify-between [&::-webkit-details-marker]:hidden">
+                        <span class="flex font-edf font-bold md:text-lg md:font-normal">Pourquoi recharger sa voiture à 80 % ?​</span>
+                        <div class="relative flex h-6 w-6 shrink-0 items-center">
+                            <i class="fa fas fa-chevron-up absolute translate-x-1/2 text-secondary-500 opacity-0 group-open:opacity-100"></i>
+                            <i class="fa fas fa-chevron-down absolute translate-x-1/2 text-secondary-500 opacity-100 group-open:opacity-0"></i>
+                        </div>
+                    </summary>
+                </details>
+                <div class="markdown-style table-custom-style grid grid-rows-[0fr] transition-grid-template-rows peer-open:grid-rows-[1fr]">
+                    <div class="overflow-hidden">
+                        <div class="pt-4">
+                                                            <p>Recharger ses batteries à 100 % peut nuire sur le long terme au fonctionnement de votre voiture électrique. Pour cause, une recharge complète exerce une<strong> pression sur les cellules des </strong><strong>batteries</strong> <strong>lithium-ion</strong> (à date, la composition d'une grande majorité de batteries). In fine, cette pression reproduite sur un très grand nombre de cycles de recharge peut raccourcir<strong> la durée de </strong><strong>vie de la batterie</strong>.​</p>
+<p>A moins que vous ne parcouriez de longues distances au quotidien, il est déconseillé de recharger ses batteries à 100 %. Préférez une recharge à 80 % pour vos trajets quotidiens. <strong>Les </strong><strong>batteries lithium-ion </strong>supportent<strong> mal les recharges </strong>extrêmes.​<br></p>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="rounded-2xl bg-white p-4">
+                <details class="group peer relative cursor-pointer">
+                    <summary class="flex cursor-pointer list-none justify-between [&::-webkit-details-marker]:hidden">
+                        <span class="flex font-edf font-bold md:text-lg md:font-normal">Pourquoi installer une borne de recharge plutôt qu’une prise renforcée ?</span>
+                        <div class="relative flex h-6 w-6 shrink-0 items-center">
+                            <i class="fa fas fa-chevron-up absolute translate-x-1/2 text-secondary-500 opacity-0 group-open:opacity-100"></i>
+                            <i class="fa fas fa-chevron-down absolute translate-x-1/2 text-secondary-500 opacity-100 group-open:opacity-0"></i>
+                        </div>
+                    </summary>
+                </details>
+                <div class="markdown-style table-custom-style grid grid-rows-[0fr] transition-grid-template-rows peer-open:grid-rows-[1fr]">
+                    <div class="overflow-hidden">
+                        <div class="pt-4">
+                                                            <p dir="ltr">La <strong>principale différence</strong> entre une borne et une prise renforcée repose sur la <strong>puissance appelée par l’infrastructure de recharge</strong>, exprimée en kilowatts (kW) et par conséquent <strong>le temps de recharge</strong> du véhicule électrique. Plus la puissance est élevée, plus rapide est la recharge.</p>
+<p dir="ltr">La borne de recharge appelle une puissance de 7,4 kW (en monophasé) et jusqu’à 22 kW (en triphasé), et, récupère une autonomie de 50 km à 150 km par heure de recharge. La borne est recommandée pour la recharge d’un véhicule électrique.</p>
+<p dir="ltr">Quant à la prise de courant renforcée, elle appelle une puissance de 3,7 kW et permet de seulement récupérer une autonomie de 15 à 25 km par heure de recharge, selon le modèle de voiture électrique. La prise est davantage préconisée pour la recharge d’un véhicule hybride rechargeable, avec une batterie de faible capacité.</p>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [        {
+            "@type": "Question",
+            "name": "Comment calculer le temps de recharge d'une voiture électrique ?​",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le rapport de 2 données suffit à calculer le temps de recharge d&#039;une voiture électrique :​
+La puissance du véhicule électrique, et plus précisément la batterie utilisable / la puissance de charge du point de recharge (par exemple 7,4 kW pour une borne monophasée).​
+​Imaginons que vous rouliez à bord d&#039;une Fiat 500e 42 kWh, avec une batterie utilisable de 37,3 kWh, et que vous souhaitiez connaître le temps de charge de votre citadine électrique à partir d&#039;une borne de recharge à domicile 7,4 kW. Voici le calcul à effectuer :​
+Temps de recharge = 37,3 kWh / 7,4 kW​
+= 5,04 soit 5 heures et 2 minutes (conversion en heures requise).​
+Une Fiat 500e 42 kWh met donc 5h02 pour recharger intégralement ses batteries (0 à 100 %) à sur une borne de recharge 7,4 kW. Elle devrait prendre environ 3h23 à partir d&#039;une borne 11 kW adaptée au triphasé.​"
+            }
+        },            {
+            "@type": "Question",
+            "name": "Quel est le coût moyen d'une recharge d'une voiture électrique ?​",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Une Fiat 500e 42 kWLa recharge d’un véhicule électrique à domicile coûte entre 2 et 4 €/100 km.​
+Attention, le coût de recharge d’une voiture électrique dépend de plusieurs paramètres :​Le modèle du véhicule électrique. Le plein d&#039;une citadine électrique - Twingo E-Tech par exemple présentant une petite autonomie - n&#039;est pas équivalent au plein d&#039;un SUV ou d&#039;une berline électrique (une Mégane E-Tech par exemple).​La puissance du point de recharge (une borne installée à domicile versus une borne de recharge publique). Plus la borne est puissante, plus la recharge coûte cher.​Le prix de la recharge. A la maison, si le calcul est relativement simple (multiplier le prix de l&#039;électricité en forfait base ou heures creuses par le nombre kilowattheures consommés), les tarifs sont beaucoup plus variables sur voirie, d&#039;un opérateur de recharge à l&#039;autre.​
+A lire : notre article sur le coût de la recharge d&#039;une voiture électrique.​"
+            }
+        },            {
+            "@type": "Question",
+            "name": "Quelle puissance de charge choisir ?​",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La puissance de charge dépend en grande partie du type d&#039;installation électrique à domicile : 7,4 kW si vous êtes en monophasé et 9 à 22 kW si vous êtes en triphasé. ​
+A l&#039;extérieur, sur voirie, les puissances sont bien plus élevées qu&#039;à domicile : de 22 kW jusqu&#039;à 350 kW pour les superchargeurs. Encore faut-il que votre véhicule électrique soit compatible avec la recharge en courant continu (DC) équipé d&#039;un connecteur Combo CCS. ​
+Tous les modèles de voiture électrique ne sont pas adaptés à la charge rapide. Une Fiat 500e 42 kWh recharge jusqu&#039;à 85 kW maximum en charge rapide. Autrement dit, vous aurez beau charger votre Fiat 500e sur une borne 100, 200 voire 350 kWh, vos batteries ne se chargeront réellement qu&#039;à hauteur de 85 kW.​
+Bon à savoir : les batteries de type lithium-ion offrent une meilleure comptabilité avec les charges lentes à accélérées. Les charges rapides et ultrarapides augmentent l&#039;intensité de courant et surchauffent les composants de la batterie. Ce type de recharge peut donc à long terme détériorer votre batterie. ​"
+            }
+        },            {
+            "@type": "Question",
+            "name": "Pourquoi recharger sa voiture à 80 % ?​",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Recharger ses batteries à 100 % peut nuire sur le long terme au fonctionnement de votre voiture électrique. Pour cause, une recharge complète exerce une pression sur les cellules des batteries lithium-ion (à date, la composition d&#039;une grande majorité de batteries). In fine, cette pression reproduite sur un très grand nombre de cycles de recharge peut raccourcir la durée de vie de la batterie.​
+A moins que vous ne parcouriez de longues distances au quotidien, il est déconseillé de recharger ses batteries à 100 %. Préférez une recharge à 80 % pour vos trajets quotidiens. Les batteries lithium-ion supportent mal les recharges extrêmes.​"
+            }
+        },            {
+            "@type": "Question",
+            "name": "Pourquoi installer une borne de recharge plutôt qu’une prise renforcée ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La principale différence entre une borne et une prise renforcée repose sur la puissance appelée par l’infrastructure de recharge, exprimée en kilowatts (kW) et par conséquent le temps de recharge du véhicule électrique. Plus la puissance est élevée, plus rapide est la recharge.
+La borne de recharge appelle une puissance de 7,4 kW (en monophasé) et jusqu’à 22 kW (en triphasé), et, récupère une autonomie de 50 km à 150 km par heure de recharge. La borne est recommandée pour la recharge d’un véhicule électrique.
+Quant à la prise de courant renforcée, elle appelle une puissance de 3,7 kW et permet de seulement récupérer une autonomie de 15 à 25 km par heure de recharge, selon le modèle de voiture électrique. La prise est davantage préconisée pour la recharge d’un véhicule hybride rechargeable, avec une batterie de faible capacité."
+            }
+        }    ]
+}
+</script>
+                        
+                                        <section>
+                                        <h2 class="font-edf text-2xl font-bold leading-[125%] md:text-[1.75rem] text-secondary-500 mb-4 md:mb-6 font-extrabold">Nos articles</h2>
+<div class="flex flex-col gap-8 sm:gap-4">
+    <div class="grid w-full grid-cols-1 justify-between gap-8 sm:gap-6 md:grid-cols-3">
+        <div class="flex w-full flex-col gap-4">
+            <span 
+                class="relative w-full cursor-pointer overflow-hidden rounded-2xl sm:h-52" 
+                data-obfc="aHR0cHM6Ly9pemktYnktZWRmLmZyL2Jsb2cvdGVtcHMtcmVjaGFyZ2Utdm9pdHVyZS1lbGVjdHJpcXVlLw=="
+                tabindex="0"
+                role="link"
+            >
+                    
+<picture  class=" lazy"             >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/thumbs/1300×10000/simulateur-hub/2024/10/temps-de-recharge-voiture-electrique-768x513.jpg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/thumbs/1300×10000/simulateur-hub/2024/10/temps-de-recharge-voiture-electrique-768x513.jpg"                media="(min-width: 768px)"
+    >
+    <img
+                    data-src="/thumbs/1300×10000/simulateur-hub/2024/10/temps-de-recharge-voiture-electrique-768x513.jpg"
+            src="/theme/website/assets/images/white.jpg"
+            class="lazy h-full w-full object-cover transition-all hover:scale-105"
+                            >
+</picture>
+            </span>
+            <div class="flex flex-col gap-2">
+                                    <span class="text-capitalize text-base text-grey-900">Solutions de recharge</span>
+                                <a href="https://izi-by-edf.fr/blog/temps-recharge-voiture-electrique/" class="font-edf text-xl font-bold leading-[125%] md:text-2xl text-secondary-500 hover:text-primary-600">
+                    Combien de temps prend la recharge d’une voiture électrique ?
+                </a>
+            </div>
+                            <span class="text-base">Combien de temps pour recharger une voiture électrique ? C’est évidemment la question que tout conducteur est en droit de se poser !</span>
+                    </div>
+                    <div class="grid h-fit w-full grid-cols-1 gap-y-8 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 md:col-span-2">
+                                                            <div class="flex flex-col gap-2">
+                            <div class="flex w-full gap-2">
+                                <span
+                                    data-obfc="aHR0cHM6Ly9pemktYnktZWRmLmZyL2Jsb2cvcmVjaGFyZ2UtcmFwaWRlLWRvbWljaWxlLXRvdXQtc2F2b2lyLw=="
+                                    class="cursor-pointer overflow-hidden rounded-2xl bg-cover md:w-3/12"
+                                    tabindex="0"
+                                    role="link"
+                                >
+                                            
+<picture  class="rounded-2xl flex overflow-hidden lazy"             >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/thumbs/160×10000/simulateur-hub/2024/10/borne-de-recharge-rapide.jpg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/thumbs/160×10000/simulateur-hub/2024/10/borne-de-recharge-rapide.jpg"                media="(min-width: 768px)"
+    >
+    <img
+                    data-src="/thumbs/160×10000/simulateur-hub/2024/10/borne-de-recharge-rapide.jpg"
+            src="/theme/website/assets/images/white.jpg"
+            class="lazy object-cover block h-[100px] w-[100px] transition-all hover:scale-105"
+                            >
+</picture>
+                                </span>
+                                <div class="flex w-8/12 flex-col gap-1 self-center sm:w-7/12 md:w-8/12">
+                                                                            <span class="text-capitalize text-base text-grey-900">Solutions de recharge</span>
+                                                                        <a href="https://izi-by-edf.fr/blog/recharge-rapide-domicile-tout-savoir/" class="text-lg font-bold text-secondary-500 hover:text-primary-600">Tout savoir sur la borne rapide pour recharger sa voiture électrique</a>
+                                </div>
+                            </div>
+                                                            <p class="text-base">La batterie de votre voiture électrique est à plat et naturellement, l’idée vous vient de chercher la ...</p>
+                                                    </div>
+                                                                                <div class="flex flex-col gap-2">
+                            <div class="flex w-full gap-2">
+                                <span
+                                    data-obfc="aHR0cHM6Ly9pemktYnktZWRmLmZyL2Jsb2cvYm9ybmUtZGUtcmVjaGFyZ2UtYm9ubmVzLXByYXRpcXVlcy1yZWNoYXJnZS8="
+                                    class="cursor-pointer overflow-hidden rounded-2xl bg-cover md:w-3/12"
+                                    tabindex="0"
+                                    role="link"
+                                >
+                                            
+<picture  class="rounded-2xl flex overflow-hidden lazy"             >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/thumbs/160×10000/simulateur-hub/2024/10/iStock-1284782728-768x512.jpg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/thumbs/160×10000/simulateur-hub/2024/10/iStock-1284782728-768x512.jpg"                media="(min-width: 768px)"
+    >
+    <img
+                    data-src="/thumbs/160×10000/simulateur-hub/2024/10/iStock-1284782728-768x512.jpg"
+            src="/theme/website/assets/images/white.jpg"
+            class="lazy object-cover block h-[100px] w-[100px] transition-all hover:scale-105"
+                            >
+</picture>
+                                </span>
+                                <div class="flex w-8/12 flex-col gap-1 self-center sm:w-7/12 md:w-8/12">
+                                                                            <span class="text-capitalize text-base text-grey-900">Solutions de recharge</span>
+                                                                        <a href="https://izi-by-edf.fr/blog/borne-de-recharge-bonnes-pratiques-recharge/" class="text-lg font-bold text-secondary-500 hover:text-primary-600">Recharger sa voiture électrique tous les jours : une bonne idée ?</a>
+                                </div>
+                            </div>
+                                                            <p class="text-base">Si vous venez d’acquérir votre véhicule électrique, vous vous demandez sûrement comment recharger vot...</p>
+                                                    </div>
+                                                                                <div class="flex flex-col gap-2">
+                            <div class="flex w-full gap-2">
+                                <span
+                                    data-obfc="aHR0cHM6Ly9pemktYnktZWRmLmZyL2Jsb2cvcHJpeC1yZWNoYXJnZS1lbGVjdHJpcXVlLW9jdG9icmUtMjAyMi8="
+                                    class="cursor-pointer overflow-hidden rounded-2xl bg-cover md:w-3/12"
+                                    tabindex="0"
+                                    role="link"
+                                >
+                                            
+<picture  class="rounded-2xl flex overflow-hidden lazy"             >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/thumbs/160×10000/simulateur-hub/2024/10/prix-recharge-voiture-electrique.jpg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/thumbs/160×10000/simulateur-hub/2024/10/prix-recharge-voiture-electrique.jpg"                media="(min-width: 768px)"
+    >
+    <img
+                    data-src="/thumbs/160×10000/simulateur-hub/2024/10/prix-recharge-voiture-electrique.jpg"
+            src="/theme/website/assets/images/white.jpg"
+            class="lazy object-cover block h-[100px] w-[100px] transition-all hover:scale-105"
+                            >
+</picture>
+                                </span>
+                                <div class="flex w-8/12 flex-col gap-1 self-center sm:w-7/12 md:w-8/12">
+                                                                            <span class="text-capitalize text-base text-grey-900">Solutions de recharge</span>
+                                                                        <a href="https://izi-by-edf.fr/blog/prix-recharge-electrique-octobre-2022/" class="text-lg font-bold text-secondary-500 hover:text-primary-600">Combien coûte la recharge d’une voiture électrique ?</a>
+                                </div>
+                            </div>
+                                                            <p class="text-base">Avec l’arrêt programmé de la vente de véhicules thermiques d’ici 2035 en France et dans toute l’Un...</p>
+                                                    </div>
+                                                                                <div class="flex flex-col gap-2">
+                            <div class="flex w-full gap-2">
+                                <span
+                                    data-obfc="aHR0cHM6Ly9pemktYnktZWRmLmZyL2Jsb2cvcHVpc3NhbmNlLXJlY2hhcmdlLXZvaXR1cmUtZWxlY3RyaXF1ZS1kb21pY2lsZS8="
+                                    class="cursor-pointer overflow-hidden rounded-2xl bg-cover md:w-3/12"
+                                    tabindex="0"
+                                    role="link"
+                                >
+                                            
+<picture  class="rounded-2xl flex overflow-hidden lazy"             >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/thumbs/160×10000/simulateur-hub/2024/10/puissance-recharge-voiture-electrique-maison.jpg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/thumbs/160×10000/simulateur-hub/2024/10/puissance-recharge-voiture-electrique-maison.jpg"                media="(min-width: 768px)"
+    >
+    <img
+                    data-src="/thumbs/160×10000/simulateur-hub/2024/10/puissance-recharge-voiture-electrique-maison.jpg"
+            src="/theme/website/assets/images/white.jpg"
+            class="lazy object-cover block h-[100px] w-[100px] transition-all hover:scale-105"
+                            >
+</picture>
+                                </span>
+                                <div class="flex w-8/12 flex-col gap-1 self-center sm:w-7/12 md:w-8/12">
+                                                                            <span class="text-capitalize text-base text-grey-900">Solutions de recharge</span>
+                                                                        <a href="https://izi-by-edf.fr/blog/puissance-recharge-voiture-electrique-domicile/" class="text-lg font-bold text-secondary-500 hover:text-primary-600">Quelle puissance est requise pour recharger une voiture électrique à domicile ?</a>
+                                </div>
+                            </div>
+                                                            <p class="text-base">Si vous conduisez une voiture électrique, vous considérez sûrement l’utilité d’avoir une borne de r...</p>
+                                                    </div>
+                                                </div>
+            </div>
+                            <a href="https://izi-by-edf.fr/blog/mobilite-electrique/solution-recharge/"  class="group font-edf font-bold block text-base text-primary-600 transition-colors hover:cursor-pointer hover:text-primary-800 w-fit">Voir plus d&#039;articles sur les solutions de recharge<i class="fas fa-arrow-right ml-2 text-sm opacity-50 transition-all group-hover:ml-3 group-hover:opacity-100"></i></a>
+    </div>
+                </section>
+                                </div>
+    </article>
+            
+            
+<div class="flex justify-center bg-white">
+    <div class="flex w-full max-w-screen-lg flex-col items-center justify-center gap-4 px-4 lg:px-0">
+                                        
+                                                                                                                                                                                                                                        
+            
+                
+                            <div class="pt-10 md:pt-14 pb-10 md:pb-14 w-full">
+            <div class="markdown-style w-full table-custom-style flex justify-center [&>div_table]:rounded-2xl [&_table_td]:text-left [&_table_tr_td:nth-child(1)]:font-edf [&_table_tr_td:nth-child(1)]:font-bold [&_table_tr_td_p]:mb-0">
+    <div class="w-11/12 text-sm italic md:w-9/12">
+        <p><em>(1) Coût moyen estimatif de la recharge aux 100 km, calculé sur un panel de véhicules électriques, à partir du prix TTC au kWh en tarif réglementé option base (au 1er février 2024). Le coût de la recharge n’est donné qu’à titre indicatif et n’a pas de valeur contractuelle.</em></p>
+<p><em>(2) Crédit d'impôt de 500 € pour une borne pilotable&nbsp;doté d'une capacité à moduler la puissance appelée ou connectée et dotée d'une capacité&nbsp;à programmer la recharge du véhicule électrique&nbsp;(Arrêté du 24 avril 2024 pris pour l’application de l’article 200 quater C du code général des impôts).</em><br></p>
+<p><em>(3)&nbsp;</em><em>IZIVIA est partenaire d’IZI by EDF et filiale du groupe EDF. Réduction de 20% pour la souscription du Pass ACCESS, sous réserve d’installation d’une borne de recharge de véhicule électrique à votre domicile par IZI by EDF.</em></p>
+<p><em><em><em>(4) <em>Une visite technique est programmée lorsque l’état de votre installation électrique le nécessite (tableau ancien, vétuste, non sécurisé) sur recommandation de votre conseiller IZI by EDF.</em></em></em><br></em></p>
+<p><em><em>(5) <em><em><em><em>IRVE signifie Infrastructures de Recharge pour Véhicules Electriques.</em></em></em></em></em><br></em><em><br></em></p>
+    </div>
+</div>
+            </div>
+                    </div>
+</div>
+
+
+            
+                    
+                    
+<footer id="footer" class="flex items-center justify-center bg-secondary-700">
+  <div class="flex w-full max-w-screen-lg flex-col gap-14 px-4 py-14 text-white lg:px-0">
+    <div class="flex flex-col gap-28 sm:flex-row sm:flex-wrap sm:gap-8 md:gap-40">
+      <div class="flex flex-col gap-12">
+            
+<picture  class=" lazy"             >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/theme/website/assets/images/logo_izi_white.svg"                media="(min-width: 1200px)"
+    >
+    <source
+                    srcset="/theme/website/assets/images/white.jpg"
+            data-src="/theme/website/assets/images/logo_izi_white.svg"                media="(min-width: 768px)"
+    >
+    <img
+                    data-src="/theme/website/assets/images/logo_izi_white.svg"
+            src="/theme/website/assets/images/white.jpg"
+            class="lazy max-h-20 sm:max-h-28 w-fit"
+                                                    data-alt="Logo IZI by EDF"
+                        >
+</picture>
+        <div class="flex flex-col gap-6">
+          <div class="text-lg font-bold leading-[125%] text-orange-50 md:text-xl">Accès rapides</div>
+          <span data-obfc="L2NvbnRhY3Q=" class="obfc font-bold text-white hover:text-white hover:underline" tabindex="0" role="link">
+            <span class="text-white">Nous contacter</span>
+            <i class="fa-solid fa-arrow-right text-white"></i>
+          </span>
+          <div class="hover:opacity-90">
+            <a href="tel:0180846060" class="inline-flex items-center justify-start gap-1.5 rounded-lg border-2 border-white px-4 py-2 text-white hover:bg-primary-50/20 hover:text-white">
+              <i class="fa-solid fa-phone flex h-6 w-6 items-center text-center text-xl"></i>
+              <div class="flex flex-col gap-2">
+                <span class="text-lg font-bold leading-none">01 80 84 60 60</span>
+                <p class="text-xs font-normal leading-none">Prix d'un appel local</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="text-lg font-bold leading-[125%] text-orange-50 md:text-xl">Un projet ?</div>
+                    <span data-obfc="L2RldmlzLXRyYXZhdXg="  class="inline-flex w-full cursor-pointer items-center justify-center rounded-lg border-2 border-white bg-white outline outline-none text-center font-edf font-bold text-primary-600 no-underline shadow-sm transition-all hover:bg-primary-50 hover:border-primary-50 hover:text-primary-600 focus-visible:text-primary-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-200 disabled:bg-grey-100 disabled:border-grey-100 disabled:text-grey-900 disabled:cursor-not-allowed px-4 py-2 text-base  !w-fit" tabindex="0" role="link">Demander mon devis</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-12">
+        <div class="text-lg font-bold leading-[125%] text-orange-50 md:text-xl">IZI by EDF</div>
+
+        <div class="flex flex-col gap-6">
+          <div class="text-lg font-bold">A propos</div>
+                    <ul class="space-y-4">
+                                          <li>
+                  <a class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline" href=/qui-sommes-nous>Qui sommes-nous ?</a>
+                </li>
+                                                                          <li>
+                    <span class="obfc" data-obfc="L2NvbW11bmlxdWVzLWRlLXByZXNzZQ==" tabindex="0" role="link">
+                      <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Communiqués de presse</span>
+                    </span>
+                  </li>
+                                                                                          <li>
+                    <span class="obfc" data-obfc="L2ZhcQ==" tabindex="0" role="link">
+                      <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Questions réponses</span>
+                    </span>
+                  </li>
+                                                                                          <li>
+                    <span class="obfc" data-obfc="L2Jsb2c=" tabindex="0" role="link">
+                      <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Le blog</span>
+                    </span>
+                  </li>
+                                                    </ul>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <div class="text-lg font-bold">Travailler avec nous</div>
+                    <ul class="space-y-4">
+                                                            <li>
+                    <span class="obfc" data-obfc="aHR0cHM6Ly9yZWNydXRlbWVudC5pemktYnktZWRmLmZyLw==" tabindex="0" role="link">
+                      <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Rejoindre notre équipe</span>
+                    </span>
+                  </li>
+                                                                                          <li>
+                    <span class="obfc" data-obfc="L2luc2NyaXB0aW9uLXByb3NwZWN0LXBybw==" tabindex="0" role="link">
+                      <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Vous êtes un installateur</span>
+                    </span>
+                  </li>
+                                                                                          <li>
+                    <span class="obfc" data-obfc="L3Jlc2VhdS1wYXJ0ZW5haXJlcw==" tabindex="0" role="link">
+                      <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Nos partenaires</span>
+                    </span>
+                  </li>
+                                                    </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-12">
+        <div class="text-lg font-bold leading-[125%] text-orange-50 md:text-xl">Nos offres</div>
+
+        <div class="flex flex-col gap-6">
+          <div class="text-lg font-bold">La maison</div>
+                    <ul class="space-y-4">
+                                          <li>
+                  <span class="obfc" data-obfc="aHR0cHM6Ly93d3cuaXppLWJ5LWVkZi1yZW5vdi5mci9jaGF1ZGllcmUtcG9tcGUtYS1jaGFsZXVyLWFpci1lYXU=" tabindex="0" role="link">
+                    <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Pompe à chaleur air eau</span>
+                  </span>
+                </li>
+                                                        <li>
+                  <span class="obfc" data-obfc="aHR0cHM6Ly93d3cuaXppLWJ5LWVkZi1yZW5vdi5mci9jbGltYXRpc2F0aW9uLXJldmVyc2libGU=" tabindex="0" role="link">
+                    <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Climatisation réversible</span>
+                  </span>
+                </li>
+                                                        <li>
+                  <span class="obfc" data-obfc="aHR0cHM6Ly93d3cuaXppLWJ5LWVkZi1yZW5vdi5mci9jaGF1ZGllcmUtY2hhdWRpZXJlcw==" tabindex="0" role="link">
+                    <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Chaudière</span>
+                  </span>
+                </li>
+                                                        <li>
+                  <span class="obfc" data-obfc="aHR0cHM6Ly93d3cuaXppLWJ5LWVkZi1yZW5vdi5mci9jaGF1ZGllcmUtY2hhdWZmZS1lYXV4" tabindex="0" role="link">
+                    <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Chauffe-eaux</span>
+                  </span>
+                </li>
+                                                        <li>
+                  <span class="obfc" data-obfc="aHR0cHM6Ly93d3cuaXppLWJ5LWVkZi1yZW5vdi5mci9yYWRpYXRldXItZWxlY3RyaXF1ZQ==" tabindex="0" role="link">
+                    <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Radiateurs électriques</span>
+                  </span>
+                </li>
+                                                        <li>
+                  <span class="obfc" data-obfc="aHR0cHM6Ly93d3cuaXppLWJ5LWVkZi1yZW5vdi5mci9pc29sYXRpb24tbXVycy1leHRlcmlldXI=" tabindex="0" role="link">
+                    <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Isolation des murs par l’extérieur</span>
+                  </span>
+                </li>
+                                                        <li>
+                  <span class="obfc" data-obfc="aHR0cHM6Ly93d3cuaXppLWJ5LWVkZi1yZW5vdi5mci9pc29sYXRpb24tY29tYmxlcy1wZXJkdXM=" tabindex="0" role="link">
+                    <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Isolation des combles perdus</span>
+                  </span>
+                </li>
+                                                        <li>
+                  <span class="obfc" data-obfc="aHR0cHM6Ly93d3cuaXppLWJ5LWVkZi1yZW5vdi5mci9tZW51aXNlcmllcw==" tabindex="0" role="link">
+                    <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Portes &amp; fenêtres</span>
+                  </span>
+                </li>
+                                                        <li>
+                  <span class="obfc" data-obfc="L29mZnJlL21pc2UtYXV4LW5vcm1lcy1pbnN0YWxsYXRpb24tZWxlY3RyaXF1ZQ==" tabindex="0" role="link">
+                    <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Mise aux normes électrique</span>
+                  </span>
+                </li>
+                                                        <li>
+                  <span class="obfc" data-obfc="L29mZnJlL3JlbXBsYWNlbWVudC1kZS10YWJsZWF1LWVsZWN0cmlxdWU=" tabindex="0" role="link">
+                    <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Remplacement de tableau électrique</span>
+                  </span>
+                </li>
+                                                        <li>
+                  <span class="obfc" data-obfc="aHR0cHM6Ly93d3cuaXppLWJ5LWVkZi1yZW5vdi5mci9yZW5vdmF0aW9uLWVuZXJnZXRpcXVl" tabindex="0" role="link">
+                    <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Rénovation globale</span>
+                  </span>
+                </li>
+                                    </ul>
+        </div>
+
+
+        <div class="flex flex-col gap-6">
+          <div class="text-lg font-bold">Le véhicule</div>
+                    <ul class="space-y-4">
+                                          <li>
+                  <span class="obfc" data-obfc="L29mZnJlL2luc3RhbGxhdGlvbi1kLXVuZS1zb2x1dGlvbi1kZS1yZWNoYXJnZS1kZS12ZWhpY3VsZS1lbGVjdHJpcXVl" tabindex="0" role="link">
+                    <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Borne de recharge en maison</span>
+                  </span>
+                </li>
+                                                        <li>
+                  <span class="obfc" data-obfc="L29mZnJlL2luc3RhbGxhdGlvbi1kZS1ib3JuZS1kZS1yZWNoYXJnZS1lbi1jb3Byb3ByaWV0ZQ==" tabindex="0" role="link">
+                    <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Borne de recharge en copropriété</span>
+                  </span>
+                </li>
+                                                        <li>
+                  <span class="obfc" data-obfc="L29mZnJlL2luc3RhbGxlci11bmUtYm9ybmUtZGUtcmVjaGFyZ2UtZW4tZW50cmVwcmlzZQ==" tabindex="0" role="link">
+                    <span class="block w-fit cursor-pointer text-base font-normal text-white hover:text-white hover:underline">Borne de recharge en entreprise</span>
+                  </span>
+                </li>
+                                    </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-xl font-bold leading-[125%] text-orange-50">L'énergie est notre avenir, économisons-la !</div>
+    <div class="flex gap-12">
+      <a target="_blank" href="https://www.instagram.com/izibyedf/" aria-label="Icon Instagram" rel="noreferrer" class="text-white hover:text-white hover:opacity-90">
+        <i class="fa-brands fa-instagram text-4xl"></i>
+      </a>
+      <a target="_blank" href="https://www.facebook.com/IZIbyEDF" aria-label="Icon Facebook" rel="noreferrer" class="text-white hover:text-white hover:opacity-90">
+        <i class="fa-brands fa-facebook text-4xl"></i>
+      </a>
+    </div>
+    <div class="flex w-full flex-col gap-8">
+      <ul class="flex flex-wrap gap-8">
+        <li>
+          <a href="/cgu" class="font-normal text-white hover:text-white hover:underline">Mentions légales</a>
+        </li>
+        <li>
+          <a href="/cgv" class="font-normal text-white hover:text-white hover:underline">Conditions génerales de vente</a>
+        </li>
+        <li>
+          <a href="/charte-donnees-et-cookies" class="font-normal text-white hover:text-white hover:underline">Politique de confidentialité des données</a>
+        </li>
+      </ul>
+      <div class="h-0.5 bg-white"></div>
+      <p class="text-sm">© IZI by EDF
+        <span>2025</span>
+        - Colisée Gardens, 10 Av. de l'Arche, 92400 Courbevoie</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous" defer></script>
+
+
+<script src="https://js.packages.izi-by-edf.fr/3.0.66/global.js" defer></script>
+
+
+  
+        
+            <script src="https://js.packages.izi-by-edf.fr/3.0.66/simulator.js" defer></script>
+                    </body>
+</html>
+

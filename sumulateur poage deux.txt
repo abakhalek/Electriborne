@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta name="robots" content="noindex, nofollow" />
+        <meta property="og:site_name" content="IZI by EDF">
+        <meta property="og:type" content="website">
+                    <meta property="og:image" content="/theme/website/assets/images/izi-by-edf-facebook.png">
+                <link rel="icon" type="image/png" href="/theme/website/assets/images/logo.png" />
+                        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/theme/website/assets/images/touch-icon/touch-icon-retina.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/theme/website/assets/images/touch-icon/touch-icon-ipad.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/theme/website/assets/images/touch-icon/touch-icon.png" />
+        <link rel="icon" sizes="114x114" href="/theme/website/assets/images/touch-icon/touch-icon-retina.png" />
+        <meta name="theme-color" content="#001A70">
+                <meta name="msapplication-navbutton-color" content="#001A70">
+                <meta name="apple-mobile-web-app-status-bar-style" content="#001A70">
+        <script type="text/javascript" defer>window.gdprAppliesGlobally=true;(function(){function n(e){if(!window.frames[e]){if(document.body&&document.body.firstChild){var t=document.body;var r=document.createElement("iframe");r.style.display="none";r.name=e;r.title=e;t.insertBefore(r,t.firstChild)}else{setTimeout(function(){n(e)},5)}}}function e(r,a,o,c,d){function e(e,t,r,n){if(typeof r!=="function"){return}if(!window[a]){window[a]=[]}var i=false;if(d){i=d(e,n,r)}if(!i){window[a].push({command:e,version:t,callback:r,parameter:n})}}e.stub=true;e.stubVersion=2;function t(n){if(!window[r]||window[r].stub!==true){return}if(!n.data){return}var i=typeof n.data==="string";var e;try{e=i?JSON.parse(n.data):n.data}catch(t){return}if(e[o]){var a=e[o];window[r](a.command,a.version,function(e,t){var r={};r[c]={returnValue:e,success:t,callId:a.callId};if(n.source){n.source.postMessage(i?JSON.stringify(r):r,"*")}},a.parameter)}}if(typeof window[r]!=="function"){window[r]=e;if(window.addEventListener){window.addEventListener("message",t,false)}else{window.attachEvent("onmessage",t)}}}e("__tcfapi","__tcfapiBuffer","__tcfapiCall","__tcfapiReturn");n("__tcfapiLocator");(function(e,t){var r=document.createElement("link");r.rel="preconnect";r.as="script";var n=document.createElement("link");n.rel="dns-prefetch";n.as="script";var i=document.createElement("link");i.rel="preload";i.as="script";var a=document.createElement("script");a.id="spcloader";a.type="text/javascript";a["async"]=true;a.charset="utf-8";var o="https://sdk.privacy-center.org/"+e+"/loader.js?target_type=notice&target="+t;if(window.didomiConfig&&window.didomiConfig.user){var c=window.didomiConfig.user;var d=c.country;var s=c.region;if(d){o=o+"&country="+d;if(s){o=o+"&region="+s}}}r.href="https://sdk.privacy-center.org/";n.href="https://sdk.privacy-center.org/";i.href=o;a.src=o;var f=document.getElementsByTagName("script")[0];f.parentNode.insertBefore(r,f);f.parentNode.insertBefore(n,f);f.parentNode.insertBefore(i,f);f.parentNode.insertBefore(a,f)})("b5f15322-e0bf-47cd-ac5b-24d2bf7c7632","NpQ3g8Td")})();</script>
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://izi-by-edf.fr/",
+            "logo": "https://izi-by-edf.fr/theme/website/assets/images/icon-svg/logo.svg",
+            "name": "IZI by EDF",
+            "legalName": "IZI SOLUTIONS DURABLES",
+            "description": "Faites le choix de la simplicité pour vos travaux de rénovation énergétique et d'installation de borne de recharge avec IZI by EDF !",
+            "email": "contact@izi-by-edf.fr",
+            "telephone": "0180846060",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Colisée Gardens, 10 Av. de l'Arche",
+                "addressLocality": "Courbevoie",
+                "addressCountry": "FR",
+                "addressRegion": "Ile-de-France",
+                "postalCode": "92400"
+            },
+            "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "value": 100
+            },
+            "foundingDate": "2014-04-07"
+            }
+        </script>
+
+        <!-- Google Tag Manager -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5RJTTW4');</script>
+        <!-- End Google Tag Manager -->
+        <!-- Google Tag Manager bis -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://gtm-server.izi-by-edf.fr/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KKRS4G5K');</script>
+        <!-- End Google Tag Manager bis -->
+            </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.gtm-server.izi-by-edf.fr/ns.html?id=GTM-KKRS4G5K"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <!-- Google Tag Manager (noscript) bis -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RJTTW4"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) bis -->
+
+            <style>
+          html,
+          body {
+            height: 100%;
+            margin: 0;
+          }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installation d'une borne de recharge de voiture electrique ou hybride rechargeable</title>
+
+        
+    <div
+      style="height: 100%"
+      id="qr-modules-manager"
+      data-slug="installation-d-une-borne-de-recharge-de-voiture-electrique-ou-hybride-rechargeable"
+      data-izi-qr-js="https://iziqr.packages.izi-by-edf.fr/2.0.182/iziQR.js"
+      data-izi-qr-css="https://iziqr.packages.izi-by-edf.fr/2.0.182/iziQR.css"
+      data-izi-endform-js="https://iziqr.packages.izi-by-edf.fr/2.0.182/iziEndFormClassic.js"
+      data-izi-endform-css="https://iziqr.packages.izi-by-edf.fr/2.0.182/iziEndFormClassic.css"
+      data-izi-end-redirect=""
+      data-max-step="4"
+      data-disable-callback-date="false"
+      data-parcours-type="parcours_qr"
+      data-fallback-url=""
+      data-show-exit-cross="true"
+      data-show-logo="true"
+      data-show-title="true"
+      data-show-summary="false"
+      data-numbered-questions=""
+      data-restart-qr=""
+      data-send-to-lead-data="{}"
+      data-thumbnail="/thumbs/1200×10000/parcours/2024/01/1706109607_Rectangle-4.jpg"               data-izi-zipcode-js="https://iziqr.packages.izi-by-edf.fr/2.0.182/iziZipCodeClassic.js"
+        data-izi-zipcode-css="https://iziqr.packages.izi-by-edf.fr/2.0.182/iziZipCodeClassic.css"
+                >
+    </div>
+
+        
+            <script type="module" src="https://iziqr.packages.izi-by-edf.fr/2.0.182/iziModulesManager.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    </body>
+</html>
+
